@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/msteknoadam/Tutorial_DiscordBot/issues"
   },
-  "homepage": "https://github.com/msteknoadam/Tutorial_DiscordBot#readme"
+  "homepage": "https://github.com/msteknoadam/Tutorial_DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
 }
