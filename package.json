@@ -1,0 +1,22 @@
+{
+  "name": "tutorial_discordbot",
+  "version": "1.0.0",
+  "description": "This is the repository which will be used for Discord Bot tutorial on https://youtube.com/MSTEKNOADAM",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msteknoadam/Tutorial_DiscordBot.git"
+  },
+  "author": "TEKNO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msteknoadam/Tutorial_DiscordBot/issues"
+  },
+  "homepage": "https://github.com/msteknoadam/Tutorial_DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
