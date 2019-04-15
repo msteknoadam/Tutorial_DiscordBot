@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = '!';
+const CONFIG = require('./bot_config.json');
 const bot = new Discord.Client();
 
 bot.on('ready', () => {
@@ -7,15 +7,18 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-	if (message.content.startsWith(prefix)) {
-		// Message content is !test
-		message.content = message.content.slice(prefix.length); // Message content is test
-		let splitMessage = message.content.split(' ');
-		let command = splitMessage[0];
-		splitMessage = splitMessage.slice(1);
-		let args = splitMessage;
-		if (command === 'ping') return message.channel.send(`Pong!`);
+	if (message.content.startsWith(CONFIG.prefix)) {
+		// !this
+		message.content = message.content.slice(CONFIG.prefix.length); // this
+		let splittedMessage = message.content.split(' '); // !command arg1 arg2 -> command arg1 arg2 -> ["command", "arg1", "arg2"]
+		let command = splittedMessage[0];
+		splittedMessage = splittedMessage.slice(1);
+		let args = splittedMessage;
+
+		if (command === 'ping') {
+			return message.channel.send(`Pong! 🏓`);
+		}
 	}
 });
 
-bot.login('NTYzMzk5ODQ0Mzk2NTMxNzM0.XKYxBQ.3L2hQWCDsxO5N1RWkOLDEFljS0M');
+bot.login(CONFIG.token);
